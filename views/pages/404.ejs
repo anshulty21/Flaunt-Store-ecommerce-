@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flaunt Store : One-Stop for Trendy Shoes!</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    
+  
+          <!--====   Favicon   ====-->
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+          <link rel="manifest" href="/site.webmanifest"> 
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- //google fonts -->
+    
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--/Style-CSS -->
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!--/fontAwesome-CSS -->
+    <link rel="stylesheet" href="/public/assets/css/fontAwesome.css" />
+    <!--/fontAwesome-CSS -->
+
+      
+
+  
+
+</head>
+
+<body>
+      <!--===== HEADER =====-->
+    
+         
+   
+
+
+
+    <div class="w3l-error-block">
+
+        <div class="page">
+            <div class="content">
+                <div class="nav__logo">Flaunt Store.</div>
+                <div class="logo">
+                    <a class="brand-logo" href=""> Error!</a>
+                    <!-- if logo is image enable this   
+                <a class="brand-logo" href="#index.html">
+                    <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                </a> 
+            -->
+                </div>
+                <div class="error-grid">
+                    <h1>404</h1>
+                    <h2>Page not found</h2>
+                    <p>I tried to fetch some shoes, but coudn't!</p>
+                    <a href="/" class="home">Back to Home</a>
+                </div>
+
+                <div class="copy-right text-center">
+                    <p>© 2020 <a href="/" >FlStore</a>. All rights reserved. <br> Designed by
+                        <a href="https://www.linkedin.com/in/anshultyagi20/" target="_blank">Anshul Tyagi</a></p>
+                </div>
+            </div>
+            <img src="/assets/img/404.jpg" class="img-responsive" alt="error image" />
+            <img src="/assets/img/4041.jpg" alt="" class="img-mobile">
+            
+        </div>
+
+        <script src="/assets/js/jquery-3.3.1.min.js"></script>
+        <script>
+            var lFollowX = 0,
+                lFollowY = 0,
+                x = 0,
+                y = 0,
+                friction = 1 / 30;
+
+            function animate() {
+                x += (lFollowX - x) * friction;
+                y += (lFollowY - y) * friction;
+
+                translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+                $('img').css({
+                    '-webit-transform': translate,
+                    '-moz-transform': translate,
+                    'transform': translate
+                });
+
+                window.requestAnimationFrame(animate);
+            }
+
+            $(window).on('mousemove click', function (e) {
+
+                var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+                var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+                lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+                lFollowY = (10 * lMouseY) / 100;
+
+            });
+
+            animate();
+        </script>
+    </div>
+     
+     <!--===== MAIN JS =====-->
+     <script src="assets/js/main.js"></script>
+        
+
+</body>
+
+</html>
