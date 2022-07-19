@@ -1,10 +1,11 @@
 {
-   "version": 2,
-   "name": "flstore",
+   "version": 2,,
    "builds": [
-      { "src": "server.js", "use": "@vercel/node" }
+      { "src": "server.js", 
+       "use": "@vercel/node" }
    ],
    "routes": [
-      { "src": "/(.*)", "dest": "/index.js" }
+      { "src": "/(.*)",
+       "dest": "/" }
    ]
 }
